@@ -3,13 +3,13 @@ import HeartbeatButton from '~/UI/Button'
 
 export function Popup() {
   const USERNAME_EXAMPLE = 'bozzhik'
-  const [username, setUsername] = useState(USERNAME_EXAMPLE)
-  const [isExampleUsername, setIsExampleUsername] = useState(true)
+  const [username, setUsername] = useState<string>(USERNAME_EXAMPLE)
+  const [isExampleUsername, setIsExampleUsername] = useState<boolean>(true)
 
   useEffect(() => {
-    chrome.storage.sync.get(['githubUsername'], (result) => {
-      if (result.githubUsername) {
-        setUsername(result.githubUsername)
+    chrome.storage.sync.get(['username'], (result) => {
+      if (result.username) {
+        setUsername(result.username)
         setIsExampleUsername(false)
       }
     })
@@ -20,7 +20,7 @@ export function Popup() {
   }, [])
 
   const buttonUrl = `https://github.com/${username}?tab=stars`
-  const buttonText = isExampleUsername ? 'GitHub Stars Example' : 'Go to GitHub Stars'
+  const buttonText = isExampleUsername ? 'Example of GitHub Stars' : 'Your GitHub Stars'
 
   return (
     <main className="flex flex-col items-center gap-5 p-5 pt-4">

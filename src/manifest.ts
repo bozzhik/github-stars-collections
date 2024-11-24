@@ -19,13 +19,9 @@ export default defineManifest({
     default_icon: 'img/logo-48.png',
   },
   options_page: 'src/views/options.html',
-  background: {
-    service_worker: 'src/scripts/background/index.ts',
-    type: 'module',
-  },
   content_scripts: [
     {
-      matches: ['http://*/*', 'https://*/*'],
+      matches: ['https://github.com/*'],
       js: ['src/scripts/contentScript/index.ts'],
     },
   ],
