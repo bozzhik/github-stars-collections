@@ -1,6 +1,4 @@
-import { useState, useEffect } from 'react'
-
-import './Popup.css'
+import {useState, useEffect} from 'react'
 
 export const Popup = () => {
   const [count, setCount] = useState(0)
@@ -19,13 +17,13 @@ export const Popup = () => {
   }, [])
 
   useEffect(() => {
-    chrome.storage.sync.set({ count })
-    chrome.runtime.sendMessage({ type: 'COUNT', count })
+    chrome.storage.sync.set({count})
+    chrome.runtime.sendMessage({type: 'COUNT', count})
   }, [count])
 
   return (
     <main>
-      <h3>Popup Page</h3>
+      <h3 className="text-3xl font-bold">Popup Page</h3>
       <div className="calc">
         <button onClick={minus} disabled={count <= 0}>
           -

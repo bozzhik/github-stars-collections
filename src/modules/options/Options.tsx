@@ -1,6 +1,4 @@
-import { useState, useEffect } from 'react'
-
-import './Options.css'
+import {useState, useEffect} from 'react'
 
 export const Options = () => {
   const [countSync, setCountSync] = useState(0)
