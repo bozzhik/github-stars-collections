@@ -1,19 +1,9 @@
+@import './lib/fonts.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: light dark;
-  background-color: #242424;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    background-color: #fafafa;
-  }
-}
-
 body {
-  min-width: 20rem;
-  margin: 0;
+  @apply font-sans m-0 min-w-[25rem];
 }
