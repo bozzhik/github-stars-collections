@@ -5,5 +5,5 @@
 @tailwind utilities;
 
 body {
-  @apply font-sans m-0 min-w-[25rem];
+  @apply bg-background text-foreground font-sans m-0 min-w-[25rem];
 }
