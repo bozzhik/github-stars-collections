@@ -20,13 +20,13 @@ export default defineManifest({
   },
   options_page: 'src/views/options.html',
   background: {
-    service_worker: 'src/background/index.ts',
+    service_worker: 'src/scripts/background/index.ts',
     type: 'module',
   },
   content_scripts: [
     {
       matches: ['http://*/*', 'https://*/*'],
-      js: ['src/contentScript/index.ts'],
+      js: ['src/scripts/contentScript/index.ts'],
     },
   ],
   web_accessible_resources: [

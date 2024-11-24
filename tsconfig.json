@@ -21,7 +21,8 @@
       "@/*": ["./src/*"],
       "#/*": ["./src/views/*"],
       "~~/*": ["./src/modules/*"],
-      "~/*": ["./src/components/*"]
+      "~/*": ["./src/components/*"],
+      "$/*": ["./src/scripts/*"]
     }
   },
   "include": ["src"],

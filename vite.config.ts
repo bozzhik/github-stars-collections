@@ -30,6 +30,7 @@ export default defineConfig(({mode}) => {
         '#': path.resolve(__dirname, './src/views'),
         '~~': path.resolve(__dirname, './src/modules'),
         '~': path.resolve(__dirname, './src/components'),
+        $: path.resolve(__dirname, './src/scripts'),
       },
     },
 
