@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-import App from './Options'
-import '../../globals.css'
+import {Options} from '~~/options/Options'
+import '@/globals.css'
 
 ReactDOM.createRoot(document.getElementById('app') as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <Options />
   </React.StrictMode>,
 )
