@@ -17,7 +17,27 @@ const config: Config = {
       foreground: '#e6e6e6',
       primary: '#FEE102',
     },
-    extend: {},
+    extend: {
+      animation: {
+        buttonpulse: 'buttonpulse 2s infinite ease-in-out',
+      },
+      keyframes: {
+        buttonpulse: {
+          '0%': {
+            'box-shadow': '0 0 0 0 theme("colors.primary")',
+            // transform: 'scale(1)',
+          },
+          '50%': {
+            'box-shadow': '0 0 0 7px theme("colors.primary/0")',
+            // transform: 'scale(1.05)',
+          },
+          '100%': {
+            'box-shadow': '0 0 0 0 theme("colors.primary/0")',
+            // transform: 'scale(1)',
+          },
+        },
+      },
+    },
   },
   plugins: [],
 }
