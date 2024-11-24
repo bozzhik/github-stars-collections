@@ -1,11 +1,12 @@
-import { defineConfig } from 'vite'
-import { crx } from '@crxjs/vite-plugin'
+import {defineConfig} from 'vite'
+import {crx} from '@crxjs/vite-plugin'
 import react from '@vitejs/plugin-react'
+import path from 'path'
 
 import manifest from './src/manifest'
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => {
+export default defineConfig(({mode}) => {
   return {
     server: {
       port: 5173,
@@ -23,7 +24,15 @@ export default defineConfig(({ mode }) => {
         },
       },
     },
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, './src'),
+        '#': path.resolve(__dirname, './src/views'),
+        '~~': path.resolve(__dirname, './src/modules'),
+        '~': path.resolve(__dirname, './src/components'),
+      },
+    },
 
-    plugins: [crx({ manifest }), react()],
+    plugins: [crx({manifest}), react()],
   }
 })
