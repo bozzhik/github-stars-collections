@@ -15,10 +15,10 @@ export default defineManifest({
     128: 'img/logo-128.png',
   },
   action: {
-    default_popup: 'popup.html',
+    default_popup: 'src/views/popup.html',
     default_icon: 'img/logo-48.png',
   },
-  options_page: 'options.html',
+  options_page: 'src/views/options.html',
   background: {
     service_worker: 'src/background/index.ts',
     type: 'module',
